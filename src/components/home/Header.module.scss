@@ -1,0 +1,61 @@
+.container{
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.mainHeader {
+  .mySwiper{
+    .swiperSlide{
+      padding: 250px 0 300px 0;
+      background-size: cover;
+      background-position: center;
+      .headerInformation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        .mainTitle{
+          color: #fff;
+          font-size: 68px;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+        .text{
+          text-align: center;
+          font-weight: 200;
+          font-size: 26px;
+          color: #fff;
+        }
+        .seeMore{
+          background-color: #f63f3f;
+          color: #fff;
+          text-decoration: none;
+          margin-top: 28px;
+          padding: 10px 30px;
+          transition: 0.4s;
+          &:hover{
+            background-color: #f86666;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media(max-width: 400px){
+  .mainHeader{
+    .mySwiper{
+      .swiperSlide{
+        .headerInformation{
+          .mainTitle{
+            font-size: 50px;
+          }
+          .text{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

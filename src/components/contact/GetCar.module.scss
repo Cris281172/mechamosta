@@ -1,0 +1,185 @@
+.getCar {
+  .activeCarsLoop{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    .activeCar{
+      border: 2px solid #f63f3f;
+      padding: 20px;
+    }
+  }
+
+  .getCarTitle{
+    margin-bottom: 32px;
+    font-size: 22px;
+    text-align: center;
+  }
+  .getCarForm{
+    .topInformation{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .inputWrapper{
+        display: flex;
+        width: 100%;
+        position: relative;
+        margin-right: 20px;
+        padding-bottom: 20px;
+        .errorMessage{
+          position: absolute;
+          color: #f63f3f;
+          margin-top: 4px;
+          transition: 0.2s;
+          left: -100%;
+          bottom: 0;
+        }
+        .errorMessageActive{
+          left: 0;
+        }
+
+        .label{
+          position: absolute;
+          font-size: 14px;
+          top: 0;
+          transform: translateY(-50%);
+          background-color: #fff;
+          left: 15px;
+        }
+
+        .input{
+          font-size: 15px;
+          width: 100%;
+          padding: 10px 0 10px 15px;
+          border: #ccc 1px solid;
+          border-radius: 16px;
+          &:focus{
+            outline: none;
+          }
+        }
+        .inputErrorActive{
+          border: 1px solid #f86666;
+        }
+        &:nth-last-child(1){
+          margin: 0;
+        }
+      }
+    }
+    .bottomInformation{
+      display: flex;
+      justify-content: space-between;
+      .selectWrapper{
+        margin-right: 20px;
+        width: 100%;
+        position: relative;
+        &:nth-last-child(1){
+          margin: 0;
+        }
+        .label{
+          position: absolute;
+          font-size: 14px;
+          top: 0;
+          transform: translateY(-50%);
+          background-color: #fff;
+          left: 15px;
+          z-index: 1;
+        }
+        .select{
+          width: 100%;
+        }
+      }
+
+    }
+    .searchCarButtonWrapper{
+      display: flex;
+      justify-content: center;
+      .searchCarButton{
+        padding: 8px 24px;
+        color: #fff;
+        font-size: 14px;
+        background-color: #f63f3f;
+        border-radius: 32px;
+        border: none;
+        margin: 22px 0;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+          background-color: #f86666;
+        }
+      }
+    }
+
+  }
+  .viewOfChooseCar{
+    .listWrapper{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .list{
+        border: 2px solid #f63f3f;
+        text-align: center;
+        padding: 10px 20px;
+        .title{
+          font-weight: bold;
+          margin-bottom: 8px;
+          font-size: 20px;
+        }
+        .item{
+
+        }
+        .change{
+          padding: 8px 24px;
+          color: #fff;
+          font-size: 14px;
+          background-color: #f63f3f;
+          border-radius: 32px;
+          border: none;
+          margin: 12px 0 0 0;
+          transition: 0.5s;
+          cursor: pointer;
+          &:hover{
+            background-color: #f86666;
+          }
+        }
+      }
+      .buttons{
+
+        .next{
+          padding: 8px 24px;
+          color: #fff;
+          font-size: 14px;
+          background-color: #f63f3f;
+          border-radius: 32px;
+          border: none;
+          margin: 28px 0 0 0;
+          transition: 0.5s;
+          cursor: pointer;
+          &:hover{
+            background-color: #f86666;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1000px){
+  .getCar{
+    .activeCarsLoop{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .getCarForm{
+      .topInformation{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      .bottomInformation{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}
+

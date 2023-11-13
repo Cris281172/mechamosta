@@ -1,0 +1,73 @@
+.container {
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.sendStatus{
+  padding: 130px 0 0 0;
+  margin-top: 20px;
+  .send{
+    .titleWrapper{
+      display: flex;
+      justify-content: center;
+      .title{
+        padding-bottom: 5px;
+        font-size: 36px;
+        border-bottom: 4px solid #f63f3f;
+        text-align: center;
+      }
+    }
+    .buttons{
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      .back{
+        background-color: #f63f3f;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 16px;
+      }
+      .again{
+        background-color: #f63f3f;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 16px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .successSend{
+    .sendEmail{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      .text{
+        font-size: 18px;
+        text-align: center;
+        .email{
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .sendStatus{
+    .send{
+      .buttons{
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

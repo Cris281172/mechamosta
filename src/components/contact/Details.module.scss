@@ -1,0 +1,87 @@
+.details{
+  .detailsTitle{
+    margin-bottom: 32px;
+    font-size: 22px;
+    text-align: center;
+  }
+  .detailsForm{
+    .addDetailsButtonWrapper{
+      display: flex;
+      justify-content: center;
+      .addDetailsButton{
+        padding: 8px 24px;
+        color: #fff;
+        font-size: 14px;
+        background-color: #f63f3f;
+        border-radius: 32px;
+        border: none;
+        margin: 22px 0;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+          background-color: #f86666;
+        }
+      }
+    }
+    .labelWrapper{
+      margin-bottom: 30px;
+      .selectWrapper{
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 20px;
+        .label{
+          position: absolute;
+          z-index: 1;
+          bottom: 100%;
+          transform: translateY(50%);
+          left: 15px;
+          background-color: #fff;
+          font-size: 14px;
+        }
+        .select{
+          z-index: 0;
+        }
+
+      }
+      .inputWrapper{
+        padding-bottom: 20px;
+        position: relative;
+        .errorMessage{
+          position: absolute;
+          color: #f63f3f;
+          margin-top: 4px;
+          transition: 0.2s;
+          left: -100%;
+          bottom: 0;
+        }
+        .errorMessageActive{
+          left: 0;
+        }
+        .label{
+          position: absolute;
+          z-index: 1;
+          bottom: 100%;
+          transform: translateY(50%);
+          left: 15px;
+          background-color: #fff;
+          font-size: 14px;
+        }
+        .input{
+          width: 100%;
+          border: 1px solid #cccccc;
+          border-radius: 16px;
+          padding: 9px 10px;
+          font-size: 14px;
+          &:focus{
+            border: 1px solid #f63f3f;
+            outline: none;
+
+          }
+        }
+        .inputErrorActive{
+          border: 1px solid #f86666;
+        }
+      }
+    }
+  }
+}

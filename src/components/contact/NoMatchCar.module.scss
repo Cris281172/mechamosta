@@ -1,0 +1,30 @@
+.noMatchCar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .icon{
+    font-size: 50px;
+    color: #f63f3f;
+  }
+  .title{
+    font-size: 24px;
+  }
+  .text{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .complete{
+    background-color: #f63f3f;
+    cursor: pointer;
+    border: none;
+    padding: 8px 24px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+    &:hover{
+      background-color: #f86666;
+    }
+  }
+}

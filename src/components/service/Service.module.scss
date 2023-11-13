@@ -1,0 +1,142 @@
+.container {
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.service{
+  margin-top: 20px;
+  padding: 130px 0 0 0;
+  .serviceNavigation{
+    width: 100%;
+    display: flex;
+    .mobileStationaryButton{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      width: 50%;
+      background-color: #1b1b1b;
+      color: #fff;
+      border: 2px solid #929292;
+      padding: 20px 0;
+      font-size: 26px;
+      transition: 0.4s;
+      &:hover{
+        border: 2px solid #f63f3f;
+      }
+      .icon{
+        margin-left: 8px;
+      }
+    }
+    .stationary{
+      background-color: gray;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      border-left: 2px solid transparent;
+      &:hover{
+        border: 2px solid #929292;
+        border-left: 2px solid transparent;
+      }
+    }
+    .mobile{
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+    .active{
+      font-weight: bold;
+    }
+  }
+  .variants{
+    width: 100%;
+    margin-top: 25px;
+    .information{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .variantsTitle{
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .variantsText{
+        font-weight: 300;
+        font-size: 20px;
+        margin-top: 8px;
+      }
+    }
+    .variantsWrapper{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      .variant{
+        padding: 50px;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        border-radius: 24px;
+        align-items: center;
+        width: 46%;
+        position: relative;
+        &:hover{
+
+        }
+        .variantTitle{
+          color: #fff;
+          background-color: #000;
+          text-align: center;
+          font-size: 32px;
+          font-weight: 500;
+          margin-bottom: 45px;
+          padding-bottom: 5px;
+          border-bottom: 4px solid #f63f3f;
+        }
+        .backgroundImage{
+          width: 100%;
+          background-color: #f63f3f;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 900px){
+  .service{
+    .variants{
+      .variantsWrapper{
+        flex-direction: column;
+        .variant {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .service{
+    .serviceNavigation{
+      flex-direction: column;
+      .mobileStationaryButton{
+        width: 100%;
+        border-bottom: 0;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .service{
+    .variants{
+      .variantsWrapper{
+        .variant {
+          padding: 30px;
+        }
+      }
+    }
+  }
+}

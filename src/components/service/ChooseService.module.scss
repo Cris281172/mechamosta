@@ -1,0 +1,222 @@
+.container {
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.chooseService{
+  margin-top: 20px;
+  padding: 130px 20px 0 20px;
+  .backLink{
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 300;
+    .backIcon{
+      transition: 0.3s;
+      margin-right: 4px;
+    }
+    &:hover{
+      .backIcon{
+        color: #f63f3f;
+      }
+    }
+  }
+  .chooseServiceTitleWrapper{
+    display: flex;
+    justify-content: center;
+    .chooseServiceTitle{
+      color: #000;
+      font-size: 56px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 4px solid #f63f3f;
+    }
+  }
+  .serviceItem{
+    //width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    margin-top: 30px;
+    padding: 20px;
+    border: 12px solid #ccc;
+    align-items: start;
+    border-radius: 16px;
+    box-shadow: 0px 0px 28px 7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 28px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 28px 7px rgba(0,0,0,0.75);
+    &:nth-child(odd){
+      .leftSide{
+        margin-right: 0;
+        margin-left: 50px;
+        order: 2;
+      }
+    }
+    .leftSide{
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      color: #fff;
+      .activities{
+        margin: 5px 0;
+        .activitiesTitle{
+          font-weight: 300;
+        }
+        .activitiesItem{
+          font-weight: 100;
+          font-size: 16px;
+          margin-top: 5px;
+        }
+      }
+      .serviceItemTitle{
+        border-bottom: 4px solid #f63f3f;
+        padding-bottom: 8px;
+        color: #fff;
+        font-size: 32px;
+      }
+      .description{
+        margin-top: 15px;
+        .descriptionTitle{
+          margin-bottom: 5px;
+          font-weight: 300;
+        }
+        .descriptionText{
+          color: #fff;
+          font-weight: 200;
+          max-height: 500px;
+        }
+      }
+      .workTime{
+        margin-bottom: 5px;
+        .workTimeTitle{
+          font-weight: 300;
+        }
+        .workTimeSpan{
+          font-weight: 200;
+        }
+      }
+
+      .price{
+        .priceTitle{
+          font-weight: 300;
+        }
+        .priceSpan{
+          font-weight: 200;
+        }
+      }
+      
+      .visitButton{
+        background-color: #f63f3f;
+        border-radius: 32px;
+        padding: 10px 32px;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #fff;
+        transition: 0.5s;
+        &:hover{
+          background-color: #f86666;
+        }
+      }
+
+      .drive{
+        margin-top: 8px;
+        font-size: 15px;
+        .top{
+          font-weight: 300;
+          color: #f86666;
+        }
+        .bottom{
+          font-weight: 300;
+          color: #f86666;
+        }
+      }
+    }
+
+    .serviceItemImage{
+      width: 400px;
+      height: 350px;
+    }
+  }
+  .carVariantNavigation{
+    margin-top: 40px;
+    .carVariantList{
+      display: flex;
+      justify-content: space-between;
+      .carVariantItem{
+        width: 33%;
+
+        .carVariantButton{
+          border: 2px solid #ccc;
+          width: 100%;
+          background-color: #000;
+          color: #fff;
+          font-size: 20px;
+          padding: 12px 0;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover{
+            border: 2px solid #f63f3f;
+          }
+        }
+        .active{
+          border: 2px solid #f63f3f
+        }
+      }
+    }
+  }
+  .soonMore{
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px 0;
+    color: #f63f3f;
+    border: 2px dotted #f63f3f;
+  }
+}
+
+
+@media(max-width: 1000px) {
+  .chooseService{
+    .serviceItem{
+      flex-direction: column;
+      .leftSide{
+        margin-left: 0 !important;
+        margin-bottom: 30px;
+      }
+      .serviceItemImage{
+        order: 2;
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .chooseService{
+    .serviceItem{
+      .serviceItemImage{
+        height: auto;
+      }
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .chooseService{
+    .carVariantNavigation{
+      .carVariantList{
+        flex-direction: column;
+        .carVariantItem{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

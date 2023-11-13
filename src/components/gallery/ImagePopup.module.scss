@@ -1,0 +1,55 @@
+.imagePopup{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.26);
+  .imagePopupWrapper{
+    position: relative;
+    width: 30%;
+    .image{
+      width: 100%;
+    }
+    .closeIcon{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #f63f3f;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover{
+        color: #f86666;
+      }
+    }
+  }
+
+}
+
+@media(max-width: 1100px){
+  .imagePopup{
+    .imagePopupWrapper{
+      width: 35%;
+    }
+  }
+}
+@media(max-width: 800px){
+  .imagePopup{
+    .imagePopupWrapper{
+      width: 45%;
+    }
+  }
+}
+@media(max-width: 600px){
+  .imagePopup{
+    .imagePopupWrapper{
+      width: 80%;
+    }
+  }
+}

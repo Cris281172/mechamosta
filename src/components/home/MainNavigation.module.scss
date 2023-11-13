@@ -1,0 +1,119 @@
+.container{
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.backgroundActive{
+  background-color: #1b1b1b;
+  .navigation{
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      top: 100%;
+      width: 100%;
+      left: 0;
+      height: 5px;
+      background-color: #f63f3f;
+    }
+  }
+}
+
+.navigationWrapper{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  .navigation{
+    padding: 30px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+      width: 250px;
+    }
+    .listItems{
+      display: flex;
+      .item{
+        margin: 0 24px 0 0;
+        .link{
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+          font-size: 24px;
+          padding: 10px;
+          border-bottom: 4px solid transparent;
+          transition: 0.5s;
+          &:hover{
+            border-bottom: #f63f3f 4px solid;
+          }
+        }
+        .active{
+          border-bottom: #f63f3f 4px solid;
+        }
+      }
+    }
+    .hamburgerMenu{
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 1000px){
+  .navigationWrapper{
+    .navigation{
+      .listItems{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: 0.5s;
+        height: 100vh;
+        padding: 100px 15px 0 15px;
+        z-index: 5;
+        .item{
+          margin: 8px 0;
+          .link{
+            display: block;
+            width: 100%;
+            padding: 0 15px;
+            border-bottom: none;
+            &:hover{
+              border-right: #f63f3f 2px solid;
+              border-bottom: none;
+            }
+          }
+          .active{
+            border-right: #f63f3f 2px solid;
+            border-bottom: none;
+          }
+        }
+      }
+      .activeMenu{
+        right: 0;
+        background-color: #000;
+      }
+      .hamburgerMenu{
+        display: block;
+        z-index: 5;
+        .icon{
+          color: #f63f3f;
+          cursor: pointer;
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .navigationWrapper{
+    .navigation{
+      .logo{
+        width: 200px;
+      }
+    }
+  }
+}

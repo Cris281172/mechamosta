@@ -1,0 +1,120 @@
+.container{
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.service{
+  color: #fff;
+  padding: 80px 0;
+  background-color: #000;
+  .serviceTitleWrapper{
+    display: flex;
+    justify-content: center;
+    .serviceTitle{
+      color: #fff;
+      padding-bottom: 5px;
+      font-size: 42px;
+      border-bottom: 4px solid #f63f3f;
+    }
+  }
+  .offerWrapper{
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    .offer{
+      align-items: flex-start;
+      flex-direction: column;
+      margin-top: 16px;
+      display: flex;
+      .offerTitle{
+        font-size: 22px;
+        border-bottom: 2px solid #f63f3f;
+        padding-bottom: 3px;
+      }
+      .list{
+        margin-left: 20px;
+        margin-top: 8px;
+        .item{
+          margin-bottom: 14px;
+          .link{
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+            &:hover{
+              color: #f63f3f;
+            }
+          }
+        }
+      }
+      &:nth-last-child(1){
+        color: gray;
+        .offerTitle{
+          border-bottom: 2px solid gray;
+        }
+        .list{
+          .item{
+            .link{
+              color: gray;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+      &:nth-last-child(2){
+        color: gray;
+        .offerTitle{
+          border-bottom: 2px solid gray;
+        }
+        .list{
+          .item{
+            .link{
+              color: gray;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+  .seeMoreWrapper{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .seeMore{
+      text-align: center;
+      color: #fff;
+      border-radius: 16px;
+      padding: 16px 0;
+      text-decoration: none;
+      width: 100%;
+      background-color: #f63f3f;
+      transition: 0.3s;
+      &:hover{
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+@media(max-width: 1300px){
+  .service{
+    .offerWrapper{
+      grid-template-columns: repeat(2, 1fr);
+      .offer{
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .service{
+    .offerWrapper{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

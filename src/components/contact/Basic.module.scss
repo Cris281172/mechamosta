@@ -1,0 +1,79 @@
+.basic{
+  .basicTitle{
+    margin-bottom: 32px;
+    font-size: 22px;
+    text-align: center;
+  }
+  .basicForm{
+    .basicFormGrid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 40px;
+      .inputWrapper{
+        position: relative;
+        width: 100%;
+        .label{
+          position: absolute;
+          font-size: 14px;
+          top: 0;
+          transform: translateY(-50%);
+          background-color: #fff;
+          left: 15px;
+        }
+        .errorMessage{
+          position: absolute;
+          color: #f63f3f;
+          margin-top: 4px;
+          transition: 0.2s;
+          left: -100%;
+        }
+        .errorMessageActive{
+          left: 0;
+        }
+
+        .input{
+          font-size: 15px;
+          width: 100%;
+          padding: 10px 0 10px 15px;
+          border: #ccc 1px solid;
+          border-radius: 16px;
+          &:focus{
+            outline: none;
+          }
+        }
+        .inputErrorActive{
+          border: 1px solid #f86666;
+        }
+      }
+    }
+    .nextStepButtonWrapper{
+      display: flex;
+      justify-content: center;
+      .nextStepButton{
+        padding: 8px 24px;
+        color: #fff;
+        font-size: 14px;
+        background-color: #f63f3f;
+        border-radius: 32px;
+        border: none;
+        margin: 40px 0 0 0;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+          background-color: #f86666;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 800px){
+  .basic{
+    .basicForm{
+      .basicFormGrid{
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
