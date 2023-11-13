@@ -1,0 +1,22 @@
+.container{
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.privacyPolicy{
+  padding-top: 150px;
+  .titleWrapper{
+    display: flex;
+    justify-content: center;
+    .title{
+      padding-bottom: 5px;
+      font-size: 36px;
+      border-bottom: 4px solid #f63f3f;
+      text-align: center;
+    }
+  }
+
+}
+
+

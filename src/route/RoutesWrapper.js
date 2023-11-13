@@ -8,6 +8,7 @@ import Contact from "../components/contact/Contact";
 import SendStatus from "../components/contact/SendStatus";
 import NoMatch from '../components/no-match/NoMatch';
 import Gallery from '../components/gallery/Gallery';
+import PrivacyPolicy from "../components/cookies/PrivacyPolicy";
 const RoutesWrapper = () => {
 
     return(
@@ -20,6 +21,7 @@ const RoutesWrapper = () => {
                 <Route path="kontakt" element={<Contact />} />
                 <Route path="kontakt/:id" element={<SendStatus />} />
                 <Route path="galeria" element={<Gallery />} />
+                <Route path="polityka-prywatnosci" element={<PrivacyPolicy />} />
             </Route>
             <Route path="*" element={<NoMatch />} />
         </Routes>
